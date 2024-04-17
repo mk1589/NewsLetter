@@ -14,6 +14,20 @@ const Branding = () => {
           NOW POWERING THE WORLD&apos;S TOP NEWSLETTERS
         </h3>
       </div>
+      <Marquee className="w-full flex justify-around">
+        {partners.map((i: PartnersTypes, index: number) => (
+          <>
+            <Image
+              src={i.url}
+              key={i.url}
+              width={200}
+              height={200}
+              alt="partner"
+              className={`md:mx-8 w-[150px] md:w-[180px] mx-3`}
+            />
+          </>
+        ))}
+      </Marquee>
       
         </div>
     )
