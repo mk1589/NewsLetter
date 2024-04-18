@@ -5,6 +5,7 @@ import Branding from "@/modules/home/features/branding";
 import Benefits from "@/modules/home/features/benefits"
 import FeatureHighlight from "@/modules/home/features/feature.highlight"
 import Pricing from "@/modules/home/features/pricing"
+import Footer from "@/shared/widgets/footer/footer";
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
             <Benefits />
             <FeatureHighlight />
             <Pricing />
+            <Footer />
         </div>
     )
 }
