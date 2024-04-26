@@ -2,7 +2,7 @@
 
 import {NextUIProvider} from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import React from "react";
+import { useUser } from "@clerk/nextjs";
 
 
 interface ProviderProps {
@@ -11,6 +11,12 @@ interface ProviderProps {
 
 export default function Providers({children} : ProviderProps){
     const pathname = usePathname();
+
+    const {isLoaded} = useUser();
+
+    if(!isLoaded){
+      return null;
+    }
 
     return (
         <NextUIProvider>
