@@ -3,6 +3,7 @@
 import {NextUIProvider} from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 import { useUser } from "@clerk/nextjs";
+import DashboardSidebar from "@/shared/widgets/dashboard/sidebar/dashboard.sidebar";
 
 
 interface ProviderProps {
@@ -27,7 +28,7 @@ export default function Providers({children} : ProviderProps){
       pathname !== "/sign-in" ? (
         <div className="w-full flex">
           <div className="w-[290px] h-screen overflow-y-scroll">
-            
+            <DashboardSidebar />
           </div>
           {children}
         </div>
