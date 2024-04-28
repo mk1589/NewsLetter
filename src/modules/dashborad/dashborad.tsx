@@ -1,4 +1,4 @@
-import { Main } from "next/document"
+import Main from "./elements/main/main"
 
 const Dashborad = () => {
   return (
